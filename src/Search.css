@@ -11,7 +11,7 @@
 .Search input:hover {
   cursor: pointer;
   color: darkslategray;
-  background-image: linear-gradient(to top, gainsboro 0%, gray 90%);
+  background-image: linear-gradient(to top, gainsboro 0%, gray 70%);
 }
 
 .Search .Enter {

@@ -1,0 +1,30 @@
+.Search input {
+  border: 1px solid silver;
+  background-image: linear-gradient(to top, gainsboro 0%, white 90%);
+  border-radius: 3px;
+  font-size: 1.3em;
+  padding: 5px 12px;
+  font-weight: 300;
+  color: darkslategray;
+}
+
+.Search input:hover {
+  cursor: pointer;
+  color: darkslategray;
+  background-image: linear-gradient(to top, gainsboro 0%, gray 90%);
+}
+
+.Search .Enter {
+  margin: 20px 0 0 20px;
+}
+
+.Search .Submit {
+  margin: 20px 20px 0 0;
+}
+.Search p {
+  color: darkslategray;
+  font-family: calibri;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 20px;
+}

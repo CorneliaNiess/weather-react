@@ -1,14 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import Weather from "./Weather";
+import Favorits from "./Favorits";
 import Search from "./Search";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        < Weather />
-        <Search temperature={19} />
+        <h3> Weather Forecast for your city</h3>
+        < Favorits city="Rome" />
+        < Favorits city="Paris" />
+        < Favorits city="Berlin" />
+        < Favorits city="New York" />
+        < Search />
       </header>
     </div>
   );

@@ -1,7 +1,11 @@
 import React from 'react';
 
-export default function Overview(){
-return <h1> Hello </h1> 
+export default function Overview(props){
+return (
+    <ul>
+        <li> {props.temp}</li>
+    </ul>
+)
 
 
 }

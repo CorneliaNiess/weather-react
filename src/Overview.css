@@ -1,0 +1,23 @@
+.Overview {
+  background-color: #8b8b8b;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.Overview .Date {
+  font-size: 10px;
+}
+.Overview img {
+  height: 60px;
+}
+.Overview .Details {
+  font-size: 15px;
+}
+.Overview strong {
+  font-size: 20px;
+}
+.Overview .Description {
+  font-size: 20px;
+}
+.Overview .Feels {
+  font-size: 15px;
+}

@@ -33,7 +33,10 @@ export default function Search() {
           <li> Humidity: {response.data.main.humidity} % </li>
           <li> Wind: {response.data.wind.speed} km/h </li>
         </ul>
-        <Forecast city={response.data.name}/> 
+        <Forecast city={response.data.name} counter = {1}/> 
+        <Forecast city={response.data.name} counter = {2}/>
+        <Forecast city={response.data.name} counter = {3}/>
+        <Forecast city={response.data.name} counter = {4}/> 
       </div>
     );
   }

@@ -8,8 +8,8 @@ export default function Now(props){
    return (
    <div className="Now">
             <ul>
-            <li className="header"> {props.name} </li>
             <li>< Date date = {props.date} time = "now" /></li>
+            <li className="header"> {props.name} </li>
             <li className="description"> {props.description} </li>
             <li>
             {" "} 

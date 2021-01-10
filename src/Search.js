@@ -19,9 +19,12 @@ export default function Search() {
     console.log(response.data);
      setWeather(<div className="Search">
          < Now date={response.data.dt} name={response.data.name} description={response.data.weather[0].description} icon={response.data.weather[0].icon} temp={response.data.main.temp} humidity={response.data.main.humidity} speed={response.data.wind.speed} />
-          <Forecast city={response.data.name} counter={1} />
-          <Forecast city={response.data.name} counter={2} />
-         </div>)
+    <div className="container">
+      <div className="col"> <Forecast city={response.data.name} counter={1} timing={3}/> </div>   
+      <div className="col"> <Forecast city={response.data.name} counter={2} timing={6}/> </div> 
+      <div className="col"> <Forecast city={response.data.name} counter={3} timing={9}/> </div>  
+   </div> 
+   </div>)
   }
 
   function getUrl(event) {

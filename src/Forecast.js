@@ -37,7 +37,7 @@ function showForecast(response){
 
 return (
     <div>
-    < Overview date = {date} icon = {icon}  temp = {temp} description = {description} feels = {feels} max = {max} min = {min} humidity = {humidity} windspeed = {windspeed} />
+    < Overview date = {date} icon = {icon}  temp = {temp} description = {description} feels = {feels} max = {max} min = {min} humidity = {humidity} windspeed = {windspeed} timing={props.timing}/>
     </div>
 );
 };

@@ -7,12 +7,12 @@ export default function Overview(props){
 
 return (
 <div className ="Overview">
-    < Date date = {props.date} time = "forecast" />
+    < Date date = {props.date} time = "forecast" timing={props.timing}/>
     <ul>
         <li>  <img
               src={`http://openweathermap.org/img/wn/${props.icon}@2x.png`}
               alt="icon"
-            /> <Unit celsius={props.temp} time="forecast" /> </li>
+            /> <Unit celsius={props.temp} time="forecast" timing="3" /> </li>
         <li className="Description"> <em> {props.description} </em> </li>
         <li className="Feels"> Feels like: {Math.round(props.feels)}  ℃ </li>
     </ul>

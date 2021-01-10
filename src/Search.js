@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Forecast from "./Forecast";
+import Now from "./Now";
+import "bootstrap/dist/css/bootstrap.css";
 
 import "./Search.css";
 
@@ -15,30 +17,11 @@ export default function Search() {
 
   function showTemperature(response) {
     console.log(response.data);
-    setWeather(
-      <div className="Search">
-            <ul>
-            <li className="header"> {response.data.name} </li>
-            <li className="description"> {response.data.weather[0].description} </li>
-            <li>
-            {" "}
-            <img
-              src={`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`}
-              alt="icon"
-            />
-          </li>
-        </ul>
-        <ul className="Details">
-          <li> Temperature: {response.data.main.temp} C</li>
-          <li> Humidity: {response.data.main.humidity} % </li>
-          <li> Wind: {response.data.wind.speed} km/h </li>
-        </ul>
-        <Forecast city={response.data.name} counter = {1}/> 
-        <Forecast city={response.data.name} counter = {2}/>
-        <Forecast city={response.data.name} counter = {3}/>
-        <Forecast city={response.data.name} counter = {4}/> 
-      </div>
-    );
+     setWeather(<div className="Search">
+         < Now date={response.data.dt} name={response.data.name} description={response.data.weather[0].description} icon={response.data.weather[0].icon} temp={response.data.main.temp} humidity={response.data.main.humidity} speed={response.data.wind.speed} />
+          <Forecast city={response.data.name} counter={1} />
+          <Forecast city={response.data.name} counter={2} />
+         </div>)
   }
 
   function getUrl(event) {
@@ -47,20 +30,18 @@ export default function Search() {
     axios.get(url).then(showTemperature);
   }
   return (
-    <div>
+    <div className="Search">
       <form>
         <input
           type="text"
           placeholder="Search for a city"
-          className="Enter"
+          className="form-control"
           onChange={updateCity}
         />
-        <input
-          type="submit"
-          value="search"
-          className="Submit"
-          onClick={getUrl}
-        />
+        <button
+          className="btn btn-primary"
+          onClick={getUrl}>
+          Search </button>
       </form>
       {weather}
     </div>

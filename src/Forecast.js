@@ -3,6 +3,7 @@ import "./Forecast.css";
 import axios from "axios";
 import Overview from "./Overview";
 
+
 export default function Forecast(props){
 
 let [date , setDate] = useState ("1");
@@ -19,7 +20,7 @@ let [windspeed , setWindspeed] = useState ("1");
 function showForecast(response){
     console.log(response.data);
     console.log(response.data.list[props.counter].main);
-    setDate(response.data.list[props.counter].dt_txt);
+    setDate(response.data.list[props.counter].dt);
     setIcon (response.data.list[props.counter].weather[0].icon);
     setTemp (response.data.list[props.counter].main.temp);
     setDescription (response.data.list[props.counter].weather[0].description);

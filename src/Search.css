@@ -1,3 +1,8 @@
+.Search {
+  max-width: 1000px;
+  margin: 0px;
+}
+
 /*CCS for display of City after search */
 .Search .header {
   font-size: 40px;
@@ -19,18 +24,13 @@ ul {
 }
 
 input {
-  border: 1px solid silver;
-  background-image: linear-gradient(to top, gainsboro 0%, white 90%);
-  border-radius: 3px;
-  font-size: 1.3em;
-  padding: 2px 12px;
-  font-weight: 50px;
-  color: darkslategray;
+  margin: 0 auto;
+  display: inline-block;
 }
 
-input:hover {
-  color: darkslategray;
-  background-image: linear-gradient(to top, gainsboro 0%, lightgray 70%);
+button {
+  margin: 0 auto;
+  display: inline-block;
 }
 
 .Submit:hover {
